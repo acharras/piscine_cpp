@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 16:50:35 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/17 13:25:29 by acharras         ###   ########lyon.fr   */
+/*   Created: 2021/03/17 13:35:04 by acharras          #+#    #+#             */
+/*   Updated: 2021/03/17 13:50:37 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEEVENT_H
-# define ZOMBIEEVENT_H
-# include <iostream>
-# include "Zombie.hpp"
-# include <cctype>
-# include <cstring>
+# include "ZombieHorde.hpp"
 
-class ZombieEvent
-{	
-	private:
+ZombieHorde::ZombieHorde(int n){
+	this->n = n;
+}
 
-		std::string event_type;
+ZombieHorde::~ZombieHorde(void){
+}
 
-	public:
+Zombie* ZombieHorde::createHorde()
+{
+	Zombie	*r_zombie;
+	std::string name[10] = {"Carlos", "Patrick", "Bob", "Karen", "Sandy", "Sheldon", "Krabs", "Gary", "Pearl", "Puff"};
+	int	rand_i = (rand() % 10) + 1;
 
-		ZombieEvent(void);
-		~ZombieEvent(void);
-
-		void	setZombieType(std::string new_type);
-		Zombie* newZombie(std::string name);
-		Zombie* randomChump();
-};
-
-# endif
+	r_zombie = newZombie(name[rand_i]);
+	return (r_zombie);
+}

@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 16:50:35 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/17 13:25:29 by acharras         ###   ########lyon.fr   */
+/*   Created: 2021/03/17 13:44:07 by acharras          #+#    #+#             */
+/*   Updated: 2021/03/17 13:50:49 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIEEVENT_H
-# define ZOMBIEEVENT_H
+#ifndef ZOMBIEHORDE_H
+# define ZOMBIEHORDE_H
 # include <iostream>
-# include "Zombie.hpp"
 # include <cctype>
 # include <cstring>
+# include "Zombie.hpp"
 
-class ZombieEvent
+class ZombieHorde
 {	
 	private:
 
-		std::string event_type;
-
+        int n;
+		
 	public:
 
-		ZombieEvent(void);
-		~ZombieEvent(void);
-
-		void	setZombieType(std::string new_type);
-		Zombie* newZombie(std::string name);
-		Zombie* randomChump();
+		ZombieHorde(int n);
+		~ZombieHorde(void);
+        
+        Zombie* createHorde();
+        
 };
 
-# endif
+#endif

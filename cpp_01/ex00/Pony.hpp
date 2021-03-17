@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 14:28:36 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/16 17:42:54 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/03/17 10:34:43 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,13 @@ class Pony
 		Pony	ponyOnTheStack();
 		Pony*	ponyOnTheHeap();
 		void	display();
+		void	replace();
 		std::string	GetName() {return (name);};
 		std::string GetColor() {return (color);};
 		std::string GetOwner() {return (owner);};
-		void	SetName(std::string new_name){new_name = name;};
-		void	SetColor(std::string new_color){new_color = color;};
-		void	SetOwner(std::string new_owner){new_owner = owner;};
+		void	SetName(std::string new_name){name = new_name;};
+		void	SetColor(std::string new_color){color = new_color;};
+		void	SetOwner(std::string new_owner){owner = new_owner;};
 };
 
 #endif

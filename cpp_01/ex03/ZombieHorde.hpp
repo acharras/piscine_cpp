@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 13:44:07 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/17 13:50:49 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/03/18 15:06:05 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,19 @@ class ZombieHorde
 {	
 	private:
 
-        int n;
+        int size;
+		Zombie *Horde;
+		std::string horde_type;
 		
 	public:
 
 		ZombieHorde(int n);
 		~ZombieHorde(void);
         
-        Zombie* createHorde();
+		void	setZombieType(std::string new_type);
+		Zombie*	newZombie(std::string name);
+        Zombie createHorde();
+		void	announce();
         
 };
 

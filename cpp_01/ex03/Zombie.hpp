@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 13:33:23 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/17 13:35:49 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/03/18 15:07:34 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,13 @@ class Zombie
 	public:
 
 		Zombie(std::string type, std::string name);
+		Zombie(void);
 		~Zombie(void);
-		void	announce();
+		void	advert();
+		std::string GetName();
+		void	SetName(std::string new_name);
+		std::string GetType();
+		void	SetType(std::string new_type);
 };
 
 #endif

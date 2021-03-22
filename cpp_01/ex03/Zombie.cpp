@@ -6,20 +6,21 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 13:33:05 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/18 15:09:16 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/03/22 14:30:27 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 #include "ZombieHorde.hpp"
 
-Zombie::Zombie(std::string type, std::string name){
-	SetName(name);
-	SetType(type);
+Zombie::Zombie(void){
+	setZombieType();
+	setZombieName();
 }
 
-Zombie::Zombie(void){
-	std::cout << "Zombie " << name << " of type " << type << " has spawned" << std::endl;
+Zombie::Zombie(std::string old_type, std::string old_name): type(old_type), name(old_name)
+{
+	std::cout << "Zombie " << old_name << " of type " << old_type << " has spawned" << std::endl;
 }
 
 Zombie::~Zombie(void){
@@ -31,24 +32,16 @@ void	Zombie::advert()
 	std::cout << "<" << name << " (" << type << ") > Braiiiiiiinnnssss ..." << std::endl;
 }
 
-std::string Zombie::GetName()
+void	Zombie::setZombieType()
 {
-	return (name);
+	int	rand_i = rand() % 10;
+	std::string r_type[10] = {"Scorched", "Classic", "Knight", "Soul", "Archer", "Samurai", "Gunner", "Swordsman", "Crawling", "Giant"};
+	this->type = r_type[rand_i];
 }
 
-
-void	Zombie::SetName(std::string new_name)
+void	Zombie::setZombieName()
 {
-	name = new_name;
-}
-
-std::string Zombie::GetType()
-{
-	return (type);
-}
-
-
-void	Zombie::SetType(std::string new_type)
-{
-	type = new_type;
+	int	rand_i = rand() % 10;
+	std::string r_name[10] = {"Carlos", "Patrick", "Bob", "Karen", "Sandy", "Sheldon", "Krabs", "Gary", "Pearl", "Puff"};
+	this->name = r_name[rand_i];
 }

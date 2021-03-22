@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 14:23:18 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/18 15:39:52 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/03/19 10:58:05 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "Weapon.hpp"
 
 Weapon::Weapon(std::string type){
-	SetType(type);
+	new_type = type;
 }
 
 Weapon::~Weapon(){
@@ -23,11 +23,11 @@ Weapon::~Weapon(){
 
 std::string Weapon::getType()
 {
-	return (type);
+	return (new_type);
 }
 
 
-void	Weapon::setType(std::string new_type)
+void	Weapon::setType(std::string type)
 {
-	type = new_type;
+	new_type = type;
 }

@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 13:44:07 by acharras          #+#    #+#             */
-/*   Updated: 2021/03/18 15:06:05 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/03/22 13:04:44 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <iostream>
 # include <cctype>
 # include <cstring>
+# include <time.h>
 # include "Zombie.hpp"
 
 class ZombieHorde

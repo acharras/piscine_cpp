@@ -12,11 +12,10 @@
 
 #ifndef FragTrap_H
 # define FragTrap_H
+
 #include <iostream>
-#include <cstring>
-#include <cstdlib>
-#include <iomanip>
-#include <cmath>
+#include <cctype>
+#include <string>
 #include <time.h>
 
 class FragTrap

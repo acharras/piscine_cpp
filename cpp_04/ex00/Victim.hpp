@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 13:46:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/05/31 14:14:40 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/06/07 13:35:55 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Victim
         Victim();
 		Victim(std::string new_name);
 		Victim(Victim const& cpy);
-		~Victim();
+		virtual ~Victim();
 		
 		Victim&	operator=(Victim const& str);
 		const std::string	introduce() const;

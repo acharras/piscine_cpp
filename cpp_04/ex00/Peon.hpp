@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 14:04:30 by acharras          #+#    #+#             */
-/*   Updated: 2021/05/31 14:14:56 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/06/07 13:36:40 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 #include <cctype>
 #include <string>
 
-class Peon
+class Peon : public Victim
 {	
 	public:
 
         Peon();
 		Peon(std::string new_name);
 		Peon(Peon const& cpy);
-		~Peon();
+		virtual ~Peon();
 		
 		Peon&	operator=(Peon const& str);
 		const std::string	introduce() const;

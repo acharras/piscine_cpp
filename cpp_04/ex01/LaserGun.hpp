@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   LaserGun.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 16:41:48 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/03 14:26:20 by acharras         ###   ########lyon.fr   */
+/*   Created: 2021/06/07 13:43:46 by acharras          #+#    #+#             */
+/*   Updated: 2021/06/07 13:44:09 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPER_MUTANT_H
-# define SUPER_MUTANT_H
+#ifndef LASER_GUN_H
+# define LASER_GUN_H
 
 #include <iostream>
 #include <ostream>
 #include <cctype>
 #include <string> 
-#include "Enemy.hpp"
+#include "AWeapon.hpp"
 
-class SuperMutant : public Enemy
+class LaserGun : public AWeapon
 {
 	public:
-		SuperMutant();
-		SuperMutant(SuperMutant const& cpy);
-		virtual ~SuperMutant();
-		SuperMutant&	operator=(SuperMutant const& str);
-		void takeDamage(int damage);
+		LaserGun();
+		LaserGun(LaserGun const& cpy);
+		virtual ~LaserGun();
+		LaserGun&	operator=(LaserGun const& str);
+		void attack() const;
 		
 };
 

@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpion.cpp                                    :+:      :+:    :+:   */
+/*   SavageWasayad.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 16:49:50 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/03 14:30:33 by acharras         ###   ########lyon.fr   */
+/*   Created: 2021/06/07 13:49:24 by acharras          #+#    #+#             */
+/*   Updated: 2021/06/07 13:54:17 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RadScorpion.hpp"
+#include "SavageWasayad.hpp"
 
-RadScorpion::RadScorpion() : Enemy(80, "RadScorpion"){
-    std::cout << "* click click click *" << std::endl;
+SavageWasayad::SavageWasayad() : Enemy(250, "Savage Wasayad"){
+    std::cout << "Gnnn gnnn gnnn !" << std::endl;
 }
 
-RadScorpion::RadScorpion(RadScorpion const& cpy){
+SavageWasayad::SavageWasayad(SavageWasayad const& cpy){
 	*this = cpy;
 }
 
-RadScorpion::~RadScorpion(){
-    std::cout << "* SPROTCH *" << std::endl;
+SavageWasayad::~SavageWasayad(){
+    std::cout << "Gnark gnark..." << std::endl;
 }
 
-RadScorpion&	RadScorpion::operator=(RadScorpion const& str){
+SavageWasayad&	SavageWasayad::operator=(SavageWasayad const& str){
 	setType(str.getType());
 	setHP(str.getHP());
 	return (*this);
+}
+
+void SavageWasayad::takeDamage(int damage){
+    damage -= 7;
+    Enemy::takeDamage(damage);
 }

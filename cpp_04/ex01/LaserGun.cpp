@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PowerFist.cpp                                      :+:      :+:    :+:   */
+/*   LaserGun.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 14:39:06 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/03 14:33:08 by acharras         ###   ########lyon.fr   */
+/*   Created: 2021/06/07 13:44:19 by acharras          #+#    #+#             */
+/*   Updated: 2021/06/07 13:48:25 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PowerFist.hpp"
+#include "LaserGun.hpp"
 
-PowerFist::PowerFist() : AWeapon("Power Fist", 8, 50){
+LaserGun::LaserGun() : AWeapon("Laser Gun", 15, 75){
 }
 
-PowerFist::PowerFist(PowerFist const& cpy){
+LaserGun::LaserGun(LaserGun const& cpy){
 	*this = cpy;
 }
 
-PowerFist::~PowerFist(){
+LaserGun::~LaserGun(){
 }
 
-PowerFist&	PowerFist::operator=(PowerFist const& str){
+LaserGun&	LaserGun::operator=(LaserGun const& str){
 	setName(str.getName());
 	setAPCost(str.getAPCost());
 	setDamage(str.getDamage());
 	return (*this);
 }
 
-void PowerFist::attack() const{
-    std::cout << "* pschhh... SBAM! *" << std::endl;
+void LaserGun::attack() const{
+    std::cout << "* pffff .... POW ! *" << std::endl;
 }

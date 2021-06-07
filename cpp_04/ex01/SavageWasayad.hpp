@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   SavageWasayad.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 16:41:48 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/03 14:26:20 by acharras         ###   ########lyon.fr   */
+/*   Created: 2021/06/07 13:48:34 by acharras          #+#    #+#             */
+/*   Updated: 2021/06/07 13:51:51 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPER_MUTANT_H
-# define SUPER_MUTANT_H
+#ifndef SAVAGE_WASAYAD_H
+# define SAVAGE_WASAYAD_H
 
 #include <iostream>
 #include <ostream>
@@ -19,13 +19,13 @@
 #include <string> 
 #include "Enemy.hpp"
 
-class SuperMutant : public Enemy
+class SavageWasayad : public Enemy
 {
 	public:
-		SuperMutant();
-		SuperMutant(SuperMutant const& cpy);
-		virtual ~SuperMutant();
-		SuperMutant&	operator=(SuperMutant const& str);
+		SavageWasayad();
+		SavageWasayad(SavageWasayad const& cpy);
+		virtual ~SavageWasayad();
+		SavageWasayad&	operator=(SavageWasayad const& str);
 		void takeDamage(int damage);
 		
 };

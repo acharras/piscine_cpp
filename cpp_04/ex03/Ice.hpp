@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 15:13:30 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/08 15:20:57 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/06/10 14:31:55 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define ICE_HPP
 #include <iostream>
 #include "AMateria.hpp"
+
 
 class Ice : public AMateria
 {

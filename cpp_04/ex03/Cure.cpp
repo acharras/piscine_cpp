@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 15:19:43 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/08 15:20:26 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/06/10 14:14:20 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Cure::~Cure(){
 }
 
 Cure&	Cure::operator=(const Cure& str){
-    this->setXP(str.getXp());
+    this->setXP(str.getXP());
     this->setType(str.getType());
 	return (*this);
 }

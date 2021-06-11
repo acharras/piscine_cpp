@@ -6,9 +6,15 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 15:27:19 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/08 15:27:32 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/06/10 14:29:22 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Character.hpp"
+#include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
+#include "Cure.hpp"
+#include "Ice.hpp"
 
 int main()
 {

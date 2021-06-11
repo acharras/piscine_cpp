@@ -6,14 +6,14 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 15:25:56 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/08 15:30:19 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/06/10 14:33:22 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
-#include "AMateria.hpp"
 #include "ICharacter.hpp"
+#include "AMateria.hpp"
 #include <cstring>
 #include <iostream>
 

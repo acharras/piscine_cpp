@@ -6,20 +6,19 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 14:59:47 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/08 15:21:06 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/06/10 14:35:10 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
 #define AMATERIA_HPP
 #include <iostream>
-#include "ICharacter.hpp"
 
 class ICharacter;
 
 class AMateria
 {
-    protected:
+    private:
         std::string _type;
         unsigned int _xp;
     public:
@@ -37,5 +36,7 @@ class AMateria
         virtual AMateria* clone() const = 0;
         virtual void use(ICharacter& target);
 };
+
+#include "ICharacter.hpp"
 
 #endif

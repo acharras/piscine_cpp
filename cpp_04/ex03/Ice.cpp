@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 15:15:02 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/08 15:20:01 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/06/10 13:03:35 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Ice::~Ice(){
 }
 
 Ice&	Ice::operator=(const Ice& str){
-    this->setXP(str.getXp());
+    this->setXP(str.getXP());
     this->setType(str.getType());
 	return (*this);
 }

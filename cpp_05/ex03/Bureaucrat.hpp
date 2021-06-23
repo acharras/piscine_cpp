@@ -6,13 +6,15 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 14:29:32 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/22 15:07:13 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/06/22 16:54:11 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
 #include <iostream>
+
+class Form;
 
 class Bureaucrat
 {
@@ -31,7 +33,8 @@ class Bureaucrat
         unsigned int    getGrade() const;
         void    incrementGrade();
         void    decrementGrade();
-
+        void    signForm(Form &target);
+        void    executeForm(Form const& form);
         class GradeTooLowException : public std::exception{
             public:
                 virtual const char * what() const throw()
@@ -50,5 +53,7 @@ class Bureaucrat
 };
 
 std::ostream&   operator<<(std::ostream& os, Bureaucrat const& f);
+
+#include "Form.hpp"
 
 #endif

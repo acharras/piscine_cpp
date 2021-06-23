@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 14:29:31 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/22 15:07:45 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/06/22 16:12:13 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,20 @@ std::ostream&   operator<<(std::ostream& os, Bureaucrat const& f)
 {
     os << "<" << f.getName() << ">, bureaucrat grade <" << f.getGrade() << ">" << std::endl;
     return (os);
+}
+
+void    Bureaucrat::signForm(Form &target)
+{
+    if (target.getSigned() == 1)
+        std::cout << "<" << name << "> cannot sign <" << target.getName() << "> because <this form is already signed>" << std::endl;
+    else
+    {
+        if (target.getSignGrade() < grade)
+            throw Bureaucrat::GradeTooLowException();
+        else
+        {
+            target.setSigned(1);
+            std::cout << "<" << name << "> signs <" << target.getName() << ">" << std::endl;
+        }
+    }
 }

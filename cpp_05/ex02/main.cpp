@@ -6,32 +6,57 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 13:17:17 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/22 15:13:05 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/06/23 16:15:15 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main(){
+    srand(time(NULL));
     try
     {
         Bureaucrat test1("test1", 1);
-        Bureaucrat test2("test2", 2);
-        Bureaucrat test3("test3", 149);
-        Bureaucrat test4("test4", 150);
+        Bureaucrat test2("test2", 112);
+        ShrubberyCreationForm   form1("ascii");
+        PresidentialPardonForm  form2("pardon");
+        RobotomyRequestForm     form3("random");
         
-        test2.incrementGrade();
-        std::cout << "new grade test2 : " << test2.getGrade() << std::endl;
-        test3.decrementGrade();
-        std::cout << "new grade test3 : " << test3.getGrade() << std::endl;
-        test1.incrementGrade();
-        test4.decrementGrade();
+        test1.signForm(form1);
+        test2.signForm(form1);
+        test1.executeForm(form1);
+        test2.executeForm(form1);
+        std::cout << std::endl;
+
+        test1.signForm(form2);
+        test2.signForm(form2);
+        test1.executeForm(form2);
+        test2.executeForm(form2);
+        std::cout << std::endl;
+        
+        test1.signForm(form3);
+        test2.signForm(form3);
+        test1.executeForm(form3);
+        test2.executeForm(form3);
+
     }
     catch(const Bureaucrat::GradeTooHighException& e)
     {
         std::cout << e.what() << std::endl;
     }
     catch(const Bureaucrat::GradeTooLowException& e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+    catch(const Form::GradeTooHighException& e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+    catch(const Form::GradeTooLowException& e)
     {
         std::cout << e.what() << std::endl;
     }

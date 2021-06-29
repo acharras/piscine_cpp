@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/06 14:24:49 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/29 14:17:20 by acharras         ###   ########lyon.fr   */
+/*   Created: 2021/04/01 14:32:05 by acharras          #+#    #+#             */
+/*   Updated: 2021/06/29 15:17:58 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ScavTrap_H
+# define ScavTrap_H
+
+#include <iostream>
+#include <cctype>
+#include <string>
 #include "ClapTrap.hpp"
 
-int main()
-{
-    ClapTrap trap_one("Wall-e");
-    ClapTrap trap_two("R2D2");
+class ScavTrap :  public ClapTrap
+{	
+	public:
 
-    trap_one.attack(trap_two.getName());
-    trap_two.takeDamage(trap_one.getAttackDamage());
-    std::cout << std::endl;
+		ScavTrap();
+		ScavTrap(std::string new_name);
+		ScavTrap(ScavTrap const& cpy);
+		~ScavTrap();
 
-    trap_one.setAttackDamage(5);
-    trap_one.attack(trap_two.getName());
-    trap_two.takeDamage(trap_one.getAttackDamage());
-    std::cout << std::endl;
-    
-    trap_two.beRepaired(5);
-    std::cout << std::endl;
-}
+		ScavTrap& operator=(ScavTrap const& str);
+
+		bool getGateMode() const;
+		void setGateMode(bool const status);
+		void guardGate();
+		
+   private:
+
+		bool	gate_mode;
+
+};
+
+#endif

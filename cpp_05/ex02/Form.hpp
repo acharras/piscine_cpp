@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 14:27:28 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/22 16:54:40 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/07/01 14:29:22 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Form
 	public:
         Form(std::string const& Name, unsigned int Grade, unsigned int executableGrade);
         Form(const Form & cpy);
-		~Form();
+		virtual ~Form();
         Form& operator=(const Form & cpy);
 		
         std::string    getName() const;

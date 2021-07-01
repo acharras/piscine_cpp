@@ -6,14 +6,11 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 14:29:31 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/22 16:12:13 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/07/01 14:30:38 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-
-Bureaucrat::Bureaucrat(){
-}
 
 Bureaucrat::Bureaucrat(std::string const& Name, unsigned int Grade) : name(Name), grade(Grade)
 {

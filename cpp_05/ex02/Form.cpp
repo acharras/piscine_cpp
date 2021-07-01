@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 14:27:04 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/23 16:14:26 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/07/01 14:29:49 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,6 @@ void  Form::beSigned(Bureaucrat const& target)
 
 std::ostream&   operator<<(std::ostream& os, Form const& f)
 {
-    os << "Form name : " << f.getName() << ", Form grade required to sign :" << f.getSignGrade() << ", Form grade to exectute it : " << f.getExecGrade() << ", Form is signed : " << f.getSigned() << std::endl;
+    os << "Form name : " << f.getName() << ", Form grade required to sign :" << f.getSignGrade() << ", Form grade to execute it : " << f.getExecGrade() << ", Form is signed : " << f.getSigned() << std::endl;
     return (os);
 }

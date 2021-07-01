@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 13:17:17 by acharras          #+#    #+#             */
-/*   Updated: 2021/06/23 16:11:55 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/07/01 14:35:26 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ int main(){
         test2.signForm(form3);
         test1.executeForm(form3);
         test2.executeForm(form3);
+
+        delete tester;
 
     }
     catch(const Bureaucrat::GradeTooHighException& e)

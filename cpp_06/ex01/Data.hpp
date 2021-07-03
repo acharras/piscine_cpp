@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Conversion.hpp                                     :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/01 11:51:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/07/03 16:32:07 by acharras         ###   ########lyon.fr   */
+/*   Created: 2021/07/03 16:33:28 by acharras          #+#    #+#             */
+/*   Updated: 2021/07/03 17:16:11 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERSION_HPP
-#define CONVERSION_HPP
+#ifndef DATA_HPP
+#define DATA_HPP
 
 #include <iostream>
 #include <string>
@@ -19,30 +19,24 @@
 #include <iomanip>
 #include <math.h>
 
-class Conversion
+class Data
 {
 
     private :
 
-        Conversion();
-        std::string str;
-        int     acc;
-        char    chr;
         int     i;
-        float   f;
-        double  d;
-        
+        std::string s1;
+        std::string s2;
+    
     public :
 
-        Conversion(std::string const& new_str);
-        Conversion(const Conversion & cpy);
-        ~Conversion();
-        Conversion& operator=(const Conversion & cpy);
+        Data();
+        Data(const Data & cpy);
+        ~Data();
+        Data& operator=(const Data & cpy);
 
-        void    Convert_char();
-        void    Convert_int();
-        void    Convert_float();
-        void    Convert_double();
+        uintptr_t serialize(Data* ptr);
+        Data* deserialize(uintptr_t raw);
 
 };
 

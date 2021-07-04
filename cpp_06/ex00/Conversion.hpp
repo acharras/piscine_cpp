@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 11:51:09 by acharras          #+#    #+#             */
-/*   Updated: 2021/07/03 16:32:07 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/07/04 19:21:15 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class Conversion
         Conversion();
         std::string str;
         int     acc;
+        double val;
+
         char    chr;
         int     i;
         float   f;

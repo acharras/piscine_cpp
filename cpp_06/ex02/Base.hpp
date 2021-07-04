@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 13:55:16 by acharras          #+#    #+#             */
-/*   Updated: 2021/07/04 16:33:32 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/07/04 19:33:54 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 class Base
 {   
     public :
-        Base() {};
         virtual ~Base() {};
 };
 

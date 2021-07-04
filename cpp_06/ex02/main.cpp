@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 13:54:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/07/04 16:33:33 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/07/04 20:08:18 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,44 +22,55 @@ void    identify(Base* p){
         std::cout << "instanciate type B" << std::endl;
     else if (dynamic_cast<C *>(p) != 0)
         std::cout << "instanciate type C" << std::endl;
+    else
+        std::cout << "cannot cast this type" << std::endl; 
 }
 
-void    identify(Base& p){
-    if (dynamic_cast<A *>(&p) != 0)
+void    identify2(Base& p){
+    try{
+        A& ref = dynamic_cast<A&>(p);
         std::cout << "instanciate type A" << std::endl;
-    else if (dynamic_cast<B *>(&p) != 0)
+        static_cast<void>(ref);
+    }
+    catch (std::bad_cast &e) {}
+    try{
+        B& ref = dynamic_cast<B&>(p);
         std::cout << "instanciate type B" << std::endl;
-    else if (dynamic_cast<C *>(&p) != 0)
+        static_cast<void>(ref);
+    }
+    catch (std::bad_cast &e) {}
+    try{
+        C& ref = dynamic_cast<C&>(p);
         std::cout << "instanciate type C" << std::endl;
+        static_cast<void>(ref);
+    }
+    catch (std::bad_cast &e) {}
 }
 
 Base* generate(void){
     int randi = rand() % 3;
     if (randi == 0)
-        return reinterpret_cast<Base *>(new A());
+        return new A();
     else if (randi == 1)
-        return reinterpret_cast<Base *>(new B());
-    return reinterpret_cast<Base *>(new C());
+        return new B();
+    return new C();
 }
 
 int main()
 {
     srand(time(NULL));
+    
     Base* B1 = generate();
-    Base* B2 = generate();
-    Base* B3 = generate();
+    Base* Bnull = NULL;
 
-    std::cout << "Pointers :" << std::endl;
+    std::cout << "Pointer :" << std::endl;
     identify(B1);
-    identify(B2);
-    identify(B3);
 
-    std::cout << "References :" << std::endl;
-    identify(*B1);
-    identify(*B2);
-    identify(*B3);
+    std::cout << "Reference :" << std::endl;
+    identify2(*B1);
 
+    std::cout << "Null Pointer :" << std::endl;
+    identify(Bnull);
+    
     delete B1;
-    delete B2;
-    delete B3;
 }

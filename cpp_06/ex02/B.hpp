@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   B.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/01 12:17:23 by acharras          #+#    #+#             */
-/*   Updated: 2021/07/04 13:53:16 by acharras         ###   ########lyon.fr   */
+/*   Created: 2021/07/04 13:57:26 by acharras          #+#    #+#             */
+/*   Updated: 2021/07/04 14:18:35 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Data.hpp"
+#ifndef B_HPP
+#define B_HPP
 
-int main()
-{
-    Data D;
-    uintptr_t i;
+#include "Base.hpp"
 
-    std::cout << "first address :\t\t" << &D << std::endl;
-    i = D.serialize(&D);
+class B : public Base
+{};
 
-    Data *sameD = D.deserialize(i);
-    std::cout << "second address :\t" << &sameD << std::endl;
-    
-    delete sameD;
-}
+
+#endif

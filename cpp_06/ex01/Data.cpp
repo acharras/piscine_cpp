@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 16:33:26 by acharras          #+#    #+#             */
-/*   Updated: 2021/07/03 17:16:10 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/07/04 13:37:32 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ uintptr_t    Data::serialize(Data* ptr){
 }
 
 Data* Data::deserialize(uintptr_t raw){
-    Data *res = new Data;
+    res = new Data;
     void *obj =reinterpret_cast<void *>(raw);
     
     res->i = *(reinterpret_cast<int *>(obj));

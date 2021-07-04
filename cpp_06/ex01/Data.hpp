@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 16:33:28 by acharras          #+#    #+#             */
-/*   Updated: 2021/07/03 17:16:11 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/07/04 13:53:18 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 #define DATA_HPP
 
 #include <iostream>
-#include <string>
-#include <limits.h>
-#include <iomanip>
-#include <math.h>
 
 class Data
 {
 
     private :
 
+        Data *res;
         int     i;
         std::string s1;
         std::string s2;

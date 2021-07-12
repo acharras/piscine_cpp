@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 13:54:54 by acharras          #+#    #+#             */
-/*   Updated: 2021/07/04 20:08:18 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/07/12 06:08:38 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void    identify(Base* p){
         std::cout << "cannot cast this type" << std::endl; 
 }
 
-void    identify2(Base& p){
+void    identify(Base& p){
     try{
         A& ref = dynamic_cast<A&>(p);
         std::cout << "instanciate type A" << std::endl;
@@ -67,7 +67,7 @@ int main()
     identify(B1);
 
     std::cout << "Reference :" << std::endl;
-    identify2(*B1);
+    identify(*B1);
 
     std::cout << "Null Pointer :" << std::endl;
     identify(Bnull);

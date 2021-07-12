@@ -6,7 +6,7 @@
 /*   By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 11:51:10 by acharras          #+#    #+#             */
-/*   Updated: 2021/07/04 19:22:53 by acharras         ###   ########lyon.fr   */
+/*   Updated: 2021/07/12 06:06:26 by acharras         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 Conversion::Conversion(std::string const& new_str) : str(new_str), acc(0), val(std::atof(str.c_str())){
     int i = 0;
 
-
     while (str[i] && (str[i] != '.'))
         i++;
     if (i == 1)
-        val = static_cast<double>(str[0]);
+    {
+        if (str[0] < '0' || str[0] > '9')
+            val = static_cast<double>(str[0]);
+    }
     if (str[i] == '.')
         i++;
     while (str[i + acc] && str[i + acc] != 'f')

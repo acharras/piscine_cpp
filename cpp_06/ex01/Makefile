@@ -6,14 +6,13 @@
 #    By: acharras <acharras@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/01 11:49:06 by acharras          #+#    #+#              #
-#    Updated: 2021/07/03 17:13:25 by acharras         ###   ########lyon.fr    #
+#    Updated: 2021/07/12 06:07:32 by acharras         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
-SRC =	Data.cpp\
-		main.cpp
+SRC =	main.cpp
 
-HEADERS = Data.hpp\
+HEADERS = Data.hpp
 
 NAME = Data
 CC = clang++

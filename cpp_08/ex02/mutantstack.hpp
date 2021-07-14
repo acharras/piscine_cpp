@@ -1,24 +1,21 @@
 #ifndef MUTANTSTACK_HPP
 #define MUTANTSTACK_HPP
+
 #include <vector>
+#include <list>
+#include <deque>
+#include <stack>
 #include <iostream>
 #include <cstring>
-#include <exception>
-#include <algorithm>
-#include <limits.h>
 
-class   MutantStack : public std::stack
-{
-    private :
-        MutantStack();
-        unsigned int Num;
+template< typename T>
+    class   MutantStack : public std::stack<T>
+    {
+        public :
 
-    public :
-        MutantStack(unsigned int N);
-        MutantStack(const MutantStack & cpy);
-        ~MutantStack();
-        MutantStack &operator=(const MutantStack &cpy);
-
+            typedef typename std::stack<T>::container_type::iterator iterator;
+            iterator begin() {return (this->c.begin()); };
+            iterator end() {return (this->c.end()); };
         
 };
 
